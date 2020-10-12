@@ -7,19 +7,19 @@ name: bookdown
 jobs:
   build:
     runs-on: windows-latest
-    env:
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@main
 
       - name: Setup R
-        uses: r-lib/actions/setup-r@main
+        uses: r-lib/actions/setup-r@v1
+        with:
+          r-version: '3.6.0'
 
       - name: Install pandoc and pandoc citeproc
-        run: |
-          choco install pandoc
-          choco install pandoc-citeproc
+        uses: r-lib/actions/setup-pandoc@v1
+        
+      - uses: r-lib/actions/setup-tinytex@v1  
 
       - name: Cache bookdown results
         uses: actions/cache@v1
@@ -31,7 +31,6 @@ jobs:
       - name: Install packages
         run: |
           R -e 'install.packages("bookdown")'
-          R -e 'renv::restore()'
 
       - name: Build site
         run: Rscript -e 'bookdown::render_book("index.Rmd", quiet = TRUE)'
