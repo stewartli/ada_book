@@ -1,4 +1,4 @@
-## Github Action Setup
+## Gitbook Setup
 
 
 1. Initialize bookdown project.
@@ -17,6 +17,7 @@
 <summary>References</summary>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=RdSmYvbQkhs">Bookdown and GitHub Pages</a></li>
+<li><a href="https://www.youtube.com/watch?v=m5D-yoH416Y">How to create a bookdown book in 5 minutes</a></li>
 <li><a href="https://www.hvitfeldt.me/blog/bookdown-netlify-github-actions/">Deploy your bookdown project to Netlify with Github Actions</a></li>
 <li><a href="https://github.com/r-lib/actions">GitHub Actions for the R language</a></li>
 <li><a href="https://ropenscilabs.github.io/actions_sandbox/">Github actions with R</a></li>

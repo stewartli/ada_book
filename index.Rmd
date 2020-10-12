@@ -11,32 +11,56 @@ description: "Improve audit effectiveness and efficiency via data analytics."
 ---
 
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, error = FALSE, 
+                      comment = ">")
+
+library(tidyverse)
+library(lubridate)
+```
+
+
 ```{r include=FALSE}
 knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown', 'tidyverse'
 ), 'packages.bib')
+```
 
-library(tidyverse)
+
+```{r}
+df <- read_csv("https://raw.githubusercontent.com/stewartli/auditworkpaper/master/data/gl.csv")
 ```
 
 
 # Overview
 
 
+For data analytics procedures, I follow the framework of [R4DS]().    
+For audit data analytics purpose, I follow the general audit procedures.    
+
+
 ## Import data 
 
 
-SQL
+From SQL, csv, excel, pdf, HTML, API. 
 
 
 ## Audit checks 
 
 
+Check PBC before auditing. 
+
+
 ## Reconcilaition
 
+
+Send out confirmation letter.
 
 
 ## Report
 
+
+Audit work paper.   
+Audit report.    
 
 
