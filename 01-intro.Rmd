@@ -9,6 +9,7 @@ library(DBI)
 Link to postgresql. 
 
 1. download psqlodbc driver. 
+2. one more line.
 
 
 
