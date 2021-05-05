@@ -6,6 +6,11 @@ library(DBI)
 ```
 
 
+Link to postgresql. 
+
+1. download psqlodbc driver. 
+
+
 
 
 
